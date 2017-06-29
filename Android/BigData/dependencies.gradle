@@ -1,0 +1,105 @@
+ext {
+    //Android
+    androidBuildToolsVersion = "25.0.2"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 25
+    androidCompileSdkVersion = 25
+    supportLibraryVersion = '25.2.0'
+    otherLibraryVersion = '25.2.0'
+    versionCode = 1
+    versionName = "0.1.3"
+    javaVersion = JavaVersion.VERSION_1_8
+    abortOnLintError = false
+    checkReleaseBuilds = false
+    ignoreWarnings = true
+    isDebug = false
+
+    //ViewLibraries
+    butterKnifeVersion = '8.5.1'
+
+    //DataLibraries
+    leakcanary = '1.5'
+
+    //logger
+    log = '1.15'
+
+    //RX FAMILY
+    rxJava = '2.0.7'
+    rxAndroid = '2.0.1'
+    rxJakeWharton = '2.0.0'
+    rxLife ='0.4.0'
+
+    //arouter
+    arouter ='1.2.2'
+    arouter_comipler ='1.1.7'
+
+    //image
+    glide = '3.7.0'
+    glide_integration = '1.4.0@aar'
+
+    //net
+    retrofit = '2.2.0'
+    okhttp = '3.4.1'
+    okhttp_interceptor = '3.4.1'
+
+    //muldex
+    muldex = '1.0.1'
+
+    androidDependencies = [
+            recyclerView: "com.android.support:recyclerview-v7:${otherLibraryVersion}",
+            appcompat_v7: "com.android.support:appcompat-v7:${otherLibraryVersion}",
+            cardview_v7 : "com.android.support:cardview-v7:${otherLibraryVersion}",
+            support_v4  : "com.android.support:support-v4:${supportLibraryVersion}",
+            design      : "com.android.support:design:${otherLibraryVersion}",
+            transition  : "com.android.support:transition:${otherLibraryVersion}",
+            constraint  : "com.android.support.constraint:constraint-layout:1.0.2",
+    ]
+
+    viewDependencies = [
+            butterKnife          : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            apt_butterKnife      : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            glide                : "com.github.bumptech.glide:glide:${glide}",
+            glide_integration    : "com.github.bumptech.glide:okhttp3-integration:${glide_integration}",
+            statusbaruitl        : "com.jaeger.statusbaruitl:library:1.3.6",
+            largeimageview       : "com.shizhefei:LargeImageView:1.0.8",
+            switch               : "com.kyleduo.switchbutton:library:1.4.6",
+            tablayout            : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            viewholder           : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.16",
+            recyclerVpg          : "com.github.lsjwzh.RecyclerViewPager:lib:v1.1.2@aar",
+    ]
+
+
+
+
+
+    rxDependencies =[
+            rxJava                : "io.reactivex.rxjava2:rxjava:${rxJava}",
+            rxAndroid             : "io.reactivex.rxjava2:rxandroid:${rxAndroid}",
+            rxBinding             : "com.jakewharton.rxbinding2:rxbinding:${rxJakeWharton}",
+            rxBinding_v7          : "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:${rxJakeWharton}",
+            rxBinding_v4          : "com.jakewharton.rxbinding2:rxbinding-support-v4:${rxJakeWharton}",
+            rxLifecycle           : "com.trello:rxlifecycle:${rxLife}",
+            rxLifecycle_components: "com.trello:rxlifecycle-components:${rxLife}",
+
+
+    ]
+
+    dataDependencies = [
+            leakcanary          : "com.squareup.leakcanary:leakcanary-android:${leakcanary}",
+            blockcnanry         : "com.github.markzhai:blockcanary-android:1.5.0",
+            log                 : "com.orhanobut:logger:${log}",
+            arouter             : "com.github.mzule.activityrouter:activityrouter:${arouter}",
+            arouter_compiler    : "com.github.mzule.activityrouter:compiler:${arouter_comipler}",
+            retrofit            : "com.squareup.retrofit2:retrofit:${retrofit}",
+            retrofit_converter  : "com.squareup.retrofit2:converter-gson:${retrofit}",
+            retrofit_adapter    : "com.squareup.retrofit2:adapter-rxjava2:${retrofit}",
+            okhttp              : "com.squareup.okhttp3:okhttp:${okhttp}",
+            okhttp_interceptor  : "com.squareup.okhttp3:logging-interceptor:${okhttp_interceptor}",
+            multidex            : "com.android.support:multidex:${muldex}",
+            aliRouter           : "com.alibaba:arouter-api:1.2.0.3",
+            aliRouter_compiler  : "com.alibaba:arouter-compiler:1.1.1.1",
+            aliRouter_annotation: "com.alibaba:arouter-annotation:1.0.3",
+            umeng_analytics     : "com.umeng.analytics:analytics:latest.integration",
+            download            : "com.liulishuo.filedownloader:library:1.5.1",
+    ]
+}
