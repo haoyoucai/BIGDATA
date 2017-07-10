@@ -64,7 +64,6 @@ public abstract class BaseActivity extends AppCompatActivity implements Activity
                 | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
         decorView.setSystemUiVisibility(option);
         StatusBarUtil.setTransparent(this);
-        setRequestedOrientation(SCREEN_ORIENTATION_REVERSE_PORTRAIT);
         lifecycleSubject.onNext(ActivityEvent.CREATE);
         setContentView(getLayoutId());
         toolbarHelper = new ToolbarHelper(getWindow().getDecorView());

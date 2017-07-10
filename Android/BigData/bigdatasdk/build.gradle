@@ -6,7 +6,7 @@ def Dependencies = rootProject.ext
 android {
     compileSdkVersion Dependencies.androidCompileSdkVersion
     buildToolsVersion Dependencies.androidBuildToolsVersion
-    resourcePrefix "sdk_"
+//    resourcePrefix "sdk_"
     defaultConfig {
         minSdkVersion Dependencies.androidMinSdkVersion
         targetSdkVersion Dependencies.androidTargetSdkVersion
