@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
 def Dependencies = rootProject.ext
+def Properties keyProps = new Properties()
+keyProps.load(new FileInputStream(file('../common.properties')))
+
 android {
     compileSdkVersion Dependencies.androidCompileSdkVersion
     buildToolsVersion Dependencies.androidBuildToolsVersion
@@ -16,6 +20,17 @@ android {
         }
 
 
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+
+            //分享sdk
+            manifestPlaceholders = [SHARE_KEY_VALUE    : keyProps["shareKey"],
+                                    SHARE_SECRET_VALUE : keyProps["shareSecret"]
+            ]
+        }
+
     }
     buildTypes {
         release {
@@ -23,6 +38,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 
 
 
@@ -58,4 +74,7 @@ dependencies {
 
     compile project(':bigdatasdk')
 
+//
+//    compile 'com.jakewharton:butterknife:8.7.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 }

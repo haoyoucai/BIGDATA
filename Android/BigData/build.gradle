@@ -9,6 +9,11 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
+        //ioc
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'  //avoid the butter knife null point exception
+        //butter knife library
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
     }
 }
 

@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Dainel on 2017/6/23.
@@ -62,6 +63,9 @@ public class HomeActivity extends BaseActivity {
 
     @Override
     public void initEventData() {
+        ButterKnife.bind(this);
+        showOrHideFragment(0); //默认使用第一个页面
+
         RxView.clicks(llBig)
                 .throttleFirst(1, TimeUnit.SECONDS)
                 .compose(this.bindToLifecycle())
@@ -80,20 +84,20 @@ public class HomeActivity extends BaseActivity {
 
     private void showOrHideFragment(int position) {
         pagerId = position;
-        switch (position) {
-            case 0:
-                toolbarHelper.setToolbarVisible(View.GONE);
-                toolbarHelper.setTitle("精品推荐");
-                toolbarHelper.setLeftIconVisible(View.GONE);
-                toolbarHelper.setRightIconVisible(View.GONE);
-                toolbarHelper.setSecondRightVisible(View.GONE);
-                break;
-            case 1:
-//                toolbarHelper.setLeftIconVisible(View.VISIBLE);
-//                toolbarHelper.setRightIconVisible(View.VISIBLE);
-//                toolbarHelper.setSecondRightVisible(View.VISIBLE);
-                break;
-        }
+//        switch (position) {
+//            case 0:
+//                toolbarHelper.setToolbarVisible(View.GONE);
+//                toolbarHelper.setTitle("精品推荐");
+//                toolbarHelper.setLeftIconVisible(View.GONE);
+//                toolbarHelper.setRightIconVisible(View.GONE);
+//                toolbarHelper.setSecondRightVisible(View.GONE);
+//                break;
+//            case 1:
+////                toolbarHelper.setLeftIconVisible(View.VISIBLE);
+////                toolbarHelper.setRightIconVisible(View.VISIBLE);
+////                toolbarHelper.setSecondRightVisible(View.VISIBLE);
+//                break;
+//        }
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         Fragment fragment = fragmentList.get(position);
         if (!fragment.isAdded()) {

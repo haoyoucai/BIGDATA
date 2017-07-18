@@ -19,7 +19,8 @@
     <!--toolbar-->
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar_layout" />
+        layout="@layout/toolbar_layout"
+        android:visibility="gone"/>
     <!--Fragment-->
     <FrameLayout
         android:id="@+id/container"
@@ -51,7 +52,6 @@
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
-
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp" />
